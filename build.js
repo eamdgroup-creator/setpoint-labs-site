@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// SetPoint Labs static site builder. No dependencies: `node build.js` → ./dist
+// PeakLoad static site builder. No dependencies: `node build.js` → ./dist
 const fs = require('fs');
 const path = require('path');
 const C = require('./site.config.js');
@@ -35,7 +35,7 @@ const P = {
 };
 const ico = (n, cls = '') => `<svg${cls ? ` class="${cls}"` : ''} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]}</svg>`;
 const ARROW = ico('arrow');
-const logoMark = `<svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0CC481"/><stop offset="1" stop-color="#14FFB0"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><circle cx="16" cy="16" r="8.5" fill="none" stroke="#06130D" stroke-width="2.4" stroke-dasharray="40 13.4" stroke-linecap="round" transform="rotate(115 16 16)"/><path d="M16 16 21.2 10.8" stroke="#06130D" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="16" r="2.7" fill="#06130D"/></svg>`;
+const logoMark = `<svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E6FFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M6 22.5h3.5l3.2-5 3 3 5.3-10 2.5 4.5H26" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="10.5" r="2.6" fill="#FF6B2C" stroke="#fff" stroke-width="1.4"/></svg>`;
 
 // ── Shared pieces ────────────────────────────────────────────
 const bookBtn = (label = 'Book a call', cls = '') => `<a class="btn ${cls}" href="/book/">${label} ${ARROW}</a>`;
@@ -166,7 +166,7 @@ function page({ route, title, desc, body, schema = [] }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
-<meta name="theme-color" content="#F3F8F5">
+<meta name="theme-color" content="#F4F8FC">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${esc(C.brand)}">
@@ -203,6 +203,7 @@ function home() {
   <div class="wrap">
     <div class="hero-grid">
       <div>
+        <div class="eyebrow rv">Built for your busiest day</div>
         <h1 class="rv">We grow HVAC companies <span class="grad-text">better than anyone.</span></h1>
         <p class="lede rv">You focus on keeping homes comfortable. We make everything behind it run just as well: every call answered in seconds, the board full in shoulder season, maintenance plans renewed, every number on one page. All on the software you already run.</p>
         <div class="btn-row rv">${bookBtn()}<a class="btn btn-ghost" href="/system/">See the whole system</a></div>

@@ -1,6 +1,6 @@
-# SetPoint Labs website
+# PeakLoad website
 
-Marketing site for SetPoint Labs, the RevOps and strategy partner for residential HVAC companies. Static HTML built by one dependency-free Node script.
+Marketing site for PeakLoad, the RevOps and strategy partner for residential HVAC companies. Static HTML built by one dependency-free Node script.
 
 ## Edit
 - **Contact info, form webhook, calendar link:** `site.config.js` (empty values stay hidden on the site)
@@ -19,7 +19,7 @@ npx serve dist       # or: python3 -m http.server --directory dist
 | --- | --- |
 | Build command | `node build.js` |
 | Publish directory | `dist` |
-| Branch | `main` |
+| Branch | `main` (auto-deploys on push) |
 
 ## Booking form
 Set `formEndpoint` in `site.config.js` to any URL that accepts a JSON POST (GoHighLevel inbound webhook, Zapier/Make catch hook, Formspree). If only `email` is set, the form opens a pre-filled email instead. With neither, submissions are not sent anywhere.

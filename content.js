@@ -27,7 +27,7 @@ exports.pains = [
 ];
 
 exports.homeFaq = [
-  ['What does SetPoint Labs do?',
+  ['What does PeakLoad do?',
    'We build and run the front office and follow-up system for residential HVAC companies: an AI receptionist that answers every call and text in seconds, agents that chase estimates, tune-ups and renewals, and one dashboard with every number that matters. It all runs on the software you already use.'],
   ['Will this work with ServiceTitan, Housecall Pro or Jobber?',
    'Yes. We build on top of ServiceTitan, Housecall Pro, Jobber, FieldEdge, Service Fusion, Successware and more. On the first call we confirm exactly what connects to your setup, and put it in writing.'],

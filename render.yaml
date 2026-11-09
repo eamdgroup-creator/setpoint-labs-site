@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: setpoint-labs-site
+    name: peakload
     runtime: static
     buildCommand: node build.js
     staticPublishPath: ./dist

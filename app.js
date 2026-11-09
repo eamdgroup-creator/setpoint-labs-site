@@ -1,4 +1,4 @@
-/* SetPoint Labs — site behavior. No dependencies. */
+/* PeakLoad — site behavior. No dependencies. */
 (function () {
   var d = document, SITE = window.SITE || {};
   d.documentElement.classList.remove('no-js');
@@ -84,7 +84,7 @@
         location.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Strategy call request: ' + (data.company || data.name)) + '&body=' + encodeURIComponent(body);
         done();
       } else {
-        if (window.console) console.info('[SetPoint] formEndpoint not set in site.config.js. Submission:', data);
+        if (window.console) console.info('[PeakLoad] formEndpoint not set in site.config.js. Submission:', data);
         done();
       }
     });
