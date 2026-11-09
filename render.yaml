@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: setpoint-labs-site
+    runtime: static
+    buildCommand: node build.js
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=86400
